@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descobrindo o Porquê da Fé - Fé com Respostas para Crianças</title>
+<meta name="description" content="Por que tantas crianças que crescem na igreja não sabem explicar no que creem — e como mudar isso em casa, 15 minutos por semana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     CONFIGURAÇÃO RÁPIDA
+     - Link do checkout: procure por  href="#CHECKOUT"  e troque (4 lugares)
+     - Imagem de capa: salve como capa.webp na mesma pasta
+     - Tudo entre [COLCHETES] precisa ser preenchido por você
+     ========================================================= */
+  :root{
+    --azul:#2962ff; --azul-escuro:#1e4fd6;
+    --verde:#22c55e; --verde-escuro:#16a34a;
+    --texto:#1a1a1a; --texto2:#444; --cinza:#6b7280;
+    --linha:#e5e7eb; --caixa:#f1f1f1; --fundo:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:var(--azul)}
+
+  /* Topo */
+  .topo{position:sticky;top:0;z-index:10;background:var(--azul);color:#fff;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+  .topo .marca{font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;letter-spacing:.28em;font-size:20px;position:absolute;left:50%;transform:translateX(-50%)}
+  .topo .menu{width:22px;height:14px;display:flex;flex-direction:column;justify-content:space-between}
+  .topo .menu i{display:block;height:2px;background:#fff;border-radius:2px}
+  .topo .buscar{background:rgba(255,255,255,.15);border-radius:999px;padding:5px 12px;font-size:11px;font-weight:700;letter-spacing:.04em}
+
+  main{max-width:720px;margin:0 auto;padding:36px 16px 24px}
+  .chapeu{color:var(--azul);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+  h1{font-family:"Plus Jakarta Sans",sans-serif;font-size:clamp(28px,5.4vw,42px);line-height:1.18;font-weight:800;margin:12px 0 18px;letter-spacing:-.01em}
+  .linha-fina{color:var(--cinza);font-size:18px;line-height:1.55;margin-bottom:24px}
+  .autor{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--linha);margin-bottom:28px}
+  .autor .quem{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--cinza);line-height:1.4}
+  .autor .quem b{color:var(--texto)}
+  .avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 20%;background:linear-gradient(135deg,#ffd7a8,#f59e0b);display:grid;place-items:center;color:#fff;font-weight:700;flex:none}
+  .compartilhar{border:1px solid var(--linha);border-radius:999px;padding:6px 14px;font-size:11px;font-weight:700;color:var(--texto);background:#fff;cursor:pointer;flex:none}
+
+  .capa{width:100%;aspect-ratio:16/10;border-radius:10px;object-fit:cover;display:block;margin-bottom:8px;background:linear-gradient(135deg,#dbe5ff,#fef3c7)}
+  .legenda{font-size:12px;color:var(--cinza);margin-bottom:32px}
+
+  article p{font-size:18px;color:var(--texto2);margin-bottom:20px}
+  article p strong{color:var(--texto)}
+  article h2{font-family:"Plus Jakarta Sans",sans-serif;font-size:clamp(22px,4vw,28px);line-height:1.25;margin:44px 0 18px;color:var(--texto)}
+  .se p{margin-bottom:10px}
+  .destaque{font-size:21px!important;font-weight:700;color:var(--texto)!important;line-height:1.45}
+  .citacao{border-left:4px solid var(--azul);padding:4px 0 4px 18px;margin:28px 0;font-size:20px!important;font-style:italic;color:var(--texto)!important}
+  ul.perguntas{list-style:none;margin:0 0 24px}
+  ul.perguntas li{font-size:18px;color:var(--texto);font-weight:600;padding:12px 16px;background:#f5f8ff;border-radius:8px;margin-bottom:8px}
+  ul.perguntas li::before{content:"?";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--azul);color:#fff;font-size:13px;margin-right:10px}
+  ol.passos{list-style:none;counter-reset:p;margin:0 0 24px}
+  ol.passos li{counter-increment:p;position:relative;padding:14px 16px 14px 60px;border:1px solid var(--linha);border-radius:10px;margin-bottom:10px;font-size:17px;color:var(--texto2)}
+  ol.passos li::before{content:counter(p);position:absolute;left:16px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--azul);color:#fff;font-weight:700;display:grid;place-items:center}
+  ol.passos b{color:var(--texto)}
+  .timeline p{padding-left:16px;border-left:2px solid var(--linha)}
+  .link-cta{font-weight:700;font-size:19px!important;text-decoration:none}
+  .link-cta:hover{text-decoration:underline}
+
+  .caixa{background:var(--caixa);border-radius:12px;padding:32px 20px;text-align:center;margin:40px 0}
+  .caixa .nome{color:var(--azul);font-weight:600;margin-bottom:10px}
+  .caixa .sub{font-weight:600;margin-bottom:16px;font-size:15px}
+  .btn{display:inline-block;background:var(--verde);color:#fff!important;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.01em;padding:16px 24px;border-radius:6px;box-shadow:0 4px 14px rgba(34,197,94,.35);transition:background .15s,transform .15s;font-size:15px;line-height:1.3}
+  .btn:hover{background:var(--verde-escuro);transform:translateY(-1px)}
+
+  .depo-titulo{text-align:center;font-size:12px;letter-spacing:.2em;color:var(--cinza);font-weight:600;text-transform:uppercase;border-top:1px solid var(--linha);padding-top:28px;margin:48px 0 24px}
+  .depo{padding:22px 0;border-bottom:1px solid var(--linha)}
+  .depo p{font-size:16px;color:var(--texto);margin-bottom:10px}
+  .depo span{font-size:11px;color:var(--azul);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .final{text-align:center;margin:40px 0 16px}
+  .final small{display:block;color:var(--cinza);font-size:14px;margin-top:16px;max-width:380px;margin-inline:auto}
+
+  footer{background:#f7f7f7;border-top:1px solid var(--linha);margin-top:48px;padding:32px 16px}
+  footer .in{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  footer .logo{font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;color:var(--azul);font-size:22px}
+  footer p{font-size:11px;color:var(--cinza);max-width:260px;margin-top:8px;line-height:1.5}
+  footer nav{display:grid;grid-template-columns:auto auto;gap:6px 40px;font-size:11px;font-weight:700}
+  footer nav a{color:#333;text-decoration:none}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="menu"><i></i><i></i><i></i></div>
+  <div class="marca">FAMÍLIA</div>
+  <div class="buscar">⌕ BUSCAR</div>
+</header>
+
+<main>
+  <div class="chapeu">Fé em Família</div>
+  <h1>Pastor de Jovens e Adolescentes Revela: Por Que Tantas Crianças da Igreja Não Sabem Explicar a Própria Fé (E o Que Fazer em Casa)</h1>
+  <p class="linha-fina">“Elas sabiam todas as músicas e todas as histórias. Mas quando um colega perguntou ‘por que você acredita nisso?’, ficaram em silêncio.”</p>
+
+  <div class="autor">
+    <div class="quem">
+      <img class="avatar" src="autora.webp" alt="Márcia Silva">
+      <div>Por <b>Márcia Silva</b>, Especial para Família<br>23/11/2026 09h12 • Atualizado há 2 horas</div>
+    </div>
+    <button class="compartilhar" onclick="navigator.share?navigator.share({title:document.title,url:location.href}):navigator.clipboard&&navigator.clipboard.writeText(location.href)">↗ COMPARTILHAR</button>
+  </div>
+
+  <img class="capa" src="capa.webp" alt="Menina lendo a Bíblia à mesa da cozinha" onerror="this.alt='';this.removeAttribute('src')">
+  <div class="legenda">Imagem ilustrativa</div>
+
+  <article>
+    <p class="destaque">Elas cresceram dentro da igreja. Mas ninguém ensinou o porquê.</p>
+
+    <div class="se">
+      <p>Se você tem filhos entre 6 e 12 anos que vão à igreja todo domingo…</p>
+      <p>Se você acha que saber as histórias da Bíblia já basta para ter uma fé firme…</p>
+      <p>Se você já travou quando seu filho perguntou algo como “quem criou Deus?”…</p>
+      <p>Se você espera que a escola dominical dê conta sozinha…</p>
+    </div>
+    <p><strong>Então o que vou contar pode mudar a forma como você conversa sobre fé dentro de casa.</strong></p>
+
+    <p>Segundo a Lifeway Research, <strong>cerca de 2 em cada 3 jovens que frequentavam a igreja na adolescência se afastam por pelo menos um ano</strong> entre os 18 e os 22 anos.</p>
+    <p>E, na maioria das vezes, não é por rebeldia. É porque chegaram à vida adulta com muitas histórias decoradas e <strong>quase nenhuma resposta</strong>.</p>
+
+    <h2>A Pergunta Que Deixou Minha Turma em Silêncio</h2>
+    <p>Meu nome é Pastor Mark Smith. Há 32 anos cuido de adolescentes e jovens em Nova Jersey, nos EUA.</p>
+    <p>Já passaram pelo meu ministério centenas de crianças e adolescentes. Preparei estudos, organizei acampamentos, montei gincanas bíblicas.</p>
+    <p>Até que, num domingo comum, uma menina de 10 anos levantou a mão e disse: <em>“Pastor, minha colega falou que a Bíblia é só um livro de histórias inventadas. Como a gente sabe que não é?”</em></p>
+    <p>Olhei para o grupo esperando que alguém respondesse. Eram as crianças que mais sabiam versículos na igreja.</p>
+    <p><strong>Ninguém respondeu.</strong></p>
+    <p class="citacao">Naquele dia percebi: a gente ensinou o que crer. Mas esqueceu de ensinar por que crer.</p>
+
+    <h2>Saber Histórias Não É o Mesmo Que Ter Respostas</h2>
+    <p>Comecei a prestar atenção. Conversei com pais, com outros professores, com adolescentes que tinham parado de vir.</p>
+    <p>O padrão se repetia: <strong>as crianças conheciam Davi e Golias, Jonas e a baleia, a arca de Noé.</strong> Mas não sabiam ligar nada disso às perguntas que começavam a aparecer na escola, na internet, nas conversas com amigos.</p>
+    <p>E as perguntas chegam cedo. Muito mais cedo do que a gente imagina.</p>
+
+    <h2>A Fase Em Que Tudo Vira “Por Quê?”</h2>
+    <p>Por volta dos 7 aos 12 anos, a criança deixa de aceitar as coisas só porque um adulto disse. Ela quer entender. Quer motivo. Quer saber <strong>“como você sabe?”</strong>.</p>
+    <p>É a mesma fase em que a escola começa a ensinar a investigar, comparar, testar hipóteses.</p>
+    <p>Se nessa fase a fé dela recebe só “porque sim”, ela aprende que a fé não aguenta perguntas.</p>
+    <p class="destaque">Se a criança não encontrar motivos para crer agora, alguém vai oferecer motivos para duvidar depois.</p>
+
+    <h2>Por Que O Que Estamos Fazendo Não Está Bastando</h2>
+    <p><strong>EBF?</strong> Muita alegria, pouca base. A criança lembra da gincana, não do conteúdo.</p>
+    <p><strong>Escola dominical?</strong> As mesmas histórias se repetem ano após ano, mas raramente alguém explica por que elas importam hoje.</p>
+    <p><strong>Decorar versículos?</strong> A criança recita João 3:16 de cor. Pergunte o que é “vida eterna” e veja o que acontece.</p>
+    <p><strong>Culto infantil?</strong> Louvor, lanche e uma mensagem curta. Bom, mas raso para o que vem pela frente.</p>
+    <p>Nada disso é ruim. O problema é que <strong>nada disso foi feito para responder perguntas difíceis.</strong></p>
+    <p>A escola diz “questione tudo”. A igreja, muitas vezes, diz “só creia”.</p>
+    <p>Adivinha qual mensagem fala mais alto quando eles fazem 15 anos?</p>
+
+    <h2>O Que Os Pais Mais Preparados Já Fazem Em Casa</h2>
+    <p>Existe um tipo de ensino que pais pastores, professores de teologia e famílias que educam em casa usam há anos com os próprios filhos.</p>
+    <p>Em vez de só contar histórias, ele ensina a criança a <strong>pensar a fé</strong>. E responde, na linguagem dela, as perguntas que ela realmente faz:</p>
+    <ul class="perguntas">
+      <li>Se Deus criou tudo, quem criou Deus?</li>
+      <li>Por que Deus deixa coisas ruins acontecerem?</li>
+      <li>Como a gente sabe que a Bíblia é verdade?</li>
+      <li>Se eu não vejo Deus, como sei que Ele está aqui?</li>
+    </ul>
+    <p>O problema é que esse tipo de material quase nunca chega aos pais comuns. Fica em seminários, em escolas cristãs, em livros difíceis demais para uma criança.</p>
+
+    <h2>Uma Forma Simples de Levar Isso Para Dentro de Casa</h2>
+    <p>Foi aí que conheci a coleção <strong>“Descobrindo o Porquê da Fé — 52 semanas de fé com respostas para crianças”</strong>.</p>
+    <p>São livros digitais pensados para crianças de 6 a 12 anos, com uma lição por semana para fazer em família, em cerca de 15 minutos.</p>
+    <p>Mas não é mais uma coleção de historinhas. É <strong>um ano inteiro de fundamentos da fé</strong>, explicado com atividades, desenhos, desafios e conversas guiadas.</p>
+    <p>Em vez de dizer “Deus existe”, a lição convida a criança a observar a criação e tirar conclusões.</p>
+    <p>Em vez de dizer “a Bíblia é verdadeira”, ela aprende a investigar, como um pequeno detetive.</p>
+    <p>Em vez de uma fé de “porque sim”, ela constrói uma fé que sabe dar razões.</p>
+
+    <h2>Como Cada Lição Funciona</h2>
+    <p>Toda semana segue o mesmo caminho, fácil de aplicar mesmo para quem nunca estudou teologia:</p>
+    <ol class="passos">
+      <li><b>Perguntar</b> — começa com uma grande pergunta que a criança já faz (ou vai fazer).</li>
+      <li><b>Descobrir</b> — uma atividade prática leva a criança a encontrar a resposta na Bíblia.</li>
+      <li><b>Viver</b> — fecha mostrando como aquela verdade muda o dia a dia dela.</li>
+    </ol>
+    <p>Quando a criança descobre a resposta por conta própria, ela não esquece. É o mesmo princípio que boas escolas usam para ensinar ciências e matemática.</p>
+    <p><strong>A gente só esqueceu de usar isso para ensinar a fé.</strong></p>
+
+    <h2>O Que Aconteceu Quando Testei Com Famílias da Igreja</h2>
+    <!-- Preencha com o resultado REAL do seu teste/clientes. Não publique números inventados. -->
+    <div class="timeline">
+      <p><strong>Semana 1:</strong> [o que você observou no início]</p>
+      <p><strong>Semana 4:</strong> [ex.: pais contando que as perguntas apareceram no jantar]</p>
+      <p><strong>Semana 8:</strong> [ex.: crianças explicando a lição para os irmãos]</p>
+      <p><strong>Semana 12:</strong> [resultado real observado]</p>
+    </div>
+    <p>A mesma menina que fez aquela pergunta naquele dia hoje [resultado real, se houver].</p>
+
+    <h2>O Tempo Que Os Pais Não Veem Passar</h2>
+    <p>Cada semana que passa, seu filho está formando a forma como vai enxergar o mundo.</p>
+    <p>Ou com razões para crer, ou com dúvidas sem resposta.</p>
+    <p class="destaque">Não existe meio-termo.</p>
+    <p>Ou ele aprende que a fé tem respostas, ou aprende que a fé não aguenta perguntas.</p>
+
+    <h2>A Escolha Está Na Sua Mão</h2>
+    <p>Você pode continuar fazendo o que a maioria dos pais faz: mais programação, mais histórias, e torcer para dar certo.</p>
+    <p>Ou pode dar ao seu filho o que os pais mais preparados já dão aos deles: <strong>respostas de verdade, conversas profundas e uma base firme.</strong></p>
+    <p>A coleção “Descobrindo o Porquê da Fé” está disponível em formato digital, para começar ainda hoje, com <strong>[45]% de desconto</strong> nesta oferta de lançamento.</p>
+    <p><a class="link-cta" href="#CHECKOUT">Ver a Oferta de Lançamento →</a></p>
+    <p>E você tem <strong>[30/90] dias de garantia</strong>. Se seu filho não se envolver, se você não perceber diferença, é só pedir o reembolso.</p>
+    <p>Mas, pelo que vi, quando a criança finalmente recebe respostas para as perguntas dela, ela não larga.</p>
+    <p><strong>Ela pede a próxima lição.</strong></p>
+
+    <h2>Comece Antes Que As Perguntas Cheguem de Fora</h2>
+    <p>Todo domingo, pais cheios de boa vontade deixam os filhos na igreja esperando que isso baste.</p>
+    <p>E toda semana, essas crianças ouvem outras vozes na escola, no celular, nos amigos.</p>
+    <p>A pergunta não é se seu filho vai ser questionado sobre a fé. <strong>É se ele vai saber o que responder.</strong></p>
+    <p><a class="link-cta" href="#CHECKOUT">Quero Dar Essa Base ao Meu Filho →</a></p>
+    <p>15 minutos por semana. Um ano inteiro de fundamentos. Uma fé que sabe dar razões.</p>
+    <p><a class="link-cta" href="#CHECKOUT">Acessar a Coleção Digital – [45]% OFF →</a></p>
+
+    <p style="margin-top:36px"><strong>Pastor Mark Smith</strong>, 32 anos cuidando de adolescentes e jovens</p>
+    <p><a href="#CHECKOUT" style="font-size:15px;font-weight:600;text-decoration:none">Porque fé também se ensina com respostas</a></p>
+  </article>
+
+  <div class="caixa">
+    <div class="nome">Coleção “Descobrindo o Porquê da Fé”</div>
+    <div class="sub">Oferta de Lançamento com Desconto</div>
+    <a class="btn" href="#CHECKOUT">Ver Oferta</a>
+  </div>
+
+  <div class="depo-titulo">O Que Dizem Os Pais</div>
+  <!-- Substitua por depoimentos REAIS de clientes, com autorização. -->
+  <div class="depo">
+    <p>“[Depoimento real de cliente — ex.: a pergunta difícil que o filho fez e como a lição ajudou]”</p>
+    <span>— [Nome], [mãe/pai de X filhos, cidade]</span>
+  </div>
+  <div class="depo">
+    <p>“[Depoimento real de cliente]”</p>
+    <span>— [Nome], [descrição]</span>
+  </div>
+  <div class="depo">
+    <p>“[Depoimento real de cliente]”</p>
+    <span>— [Nome], [descrição]</span>
+  </div>
+
+  <div class="final">
+    <a class="btn" href="#CHECKOUT">Aplicar Desconto e Ver a Oferta</a>
+    <small>Clique no botão acima para conferir se o desconto de lançamento da coleção “Descobrindo o Porquê da Fé” ainda está ativo.</small>
+  </div>
+</main>
+
+<footer>
+  <div class="in">
+    <div>
+      <div class="logo">Família</div>
+      <p>© 2026 Descobrindo o Porquê da Fé. Conteúdo publicitário. Todos os direitos reservados.</p>
+    </div>
+    <nav>
+      <a href="#">SOBRE</a><a href="#">TERMOS</a>
+      <a href="#">PRIVACIDADE</a><a href="#">CONTATO</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
